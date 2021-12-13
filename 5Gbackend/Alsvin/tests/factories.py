@@ -1,5 +1,5 @@
 import factory
-from Alsvin-5GAPI.models import User
+from alsvin-5g-api.models import User
 
 
 class UserFactory(factory.Factory):

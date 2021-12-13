@@ -4,7 +4,7 @@ from setuptools import setup
 __version__ = "0.1"
 
 setup(
-    name="Alsvin-5GAPI",
+    name="alsvin-5g-api",
     version=__version__,
     packages=find_packages(exclude=["tests"]),
     install_requires=[

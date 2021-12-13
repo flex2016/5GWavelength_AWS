@@ -1,6 +1,6 @@
 from sqlalchemy.ext.hybrid import hybrid_property
 
-from Alsvin-5GAPI.extensions import db, pwd_context
+from alsvin-5g-api.extensions import db, pwd_context
 
 
 class User(db.Model):

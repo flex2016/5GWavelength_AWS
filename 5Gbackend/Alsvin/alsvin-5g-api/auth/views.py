@@ -7,9 +7,9 @@ from flask_jwt_extended import (
     get_jwt,
 )
 
-from Alsvin-5GAPI.models import User
-from Alsvin-5GAPI.extensions import pwd_context, jwt, apispec
-from Alsvin-5GAPI.auth.helpers import revoke_token, is_token_revoked, add_token_to_database
+from alsvin-5g-api.models import User
+from alsvin-5g-api.extensions import pwd_context, jwt, apispec
+from alsvin-5g-api.auth.helpers import revoke_token, is_token_revoked, add_token_to_database
 
 
 blueprint = Blueprint("auth", __name__, url_prefix="/auth")

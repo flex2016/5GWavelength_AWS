@@ -6,8 +6,8 @@ from flask.cli import with_appcontext
 @with_appcontext
 def init():
     """Create a new admin user"""
-    from Alsvin-5GAPI.extensions import db
-    from Alsvin-5GAPI.models import User
+    from alsvin-5g-api.extensions import db
+    from alsvin-5g-api.models import User
 
     click.echo("create user")
     user = User(username="admin", email="vlad.duda@outlook.com", password="admin", active=True)

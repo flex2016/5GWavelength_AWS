@@ -16,7 +16,7 @@ RUN pip install -U pip
 RUN pip install -r requirements.txt
 RUN pip install -e .
 
-COPY Alsvin-5GAPI Alsvin-5GAPI/
+COPY alsvin-5g-api alsvin-5g-api/
 COPY migrations migrations/
 
 EXPOSE 5000

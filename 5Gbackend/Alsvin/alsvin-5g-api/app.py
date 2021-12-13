@@ -1,17 +1,17 @@
 from flask import Flask
-from Alsvin-5GAPI import api
-from Alsvin-5GAPI import auth
-from Alsvin-5GAPI import manage
-from Alsvin-5GAPI.extensions import apispec
-from Alsvin-5GAPI.extensions import db
-from Alsvin-5GAPI.extensions import jwt
-from Alsvin-5GAPI.extensions import migrate, celery
+from alsvin-5g-api import api
+from alsvin-5g-api import auth
+from alsvin-5g-api import manage
+from alsvin-5g-api.extensions import apispec
+from alsvin-5g-api.extensions import db
+from alsvin-5g-api.extensions import jwt
+from alsvin-5g-api.extensions import migrate
 
 
 def create_app(testing=False):
     """Application factory, used to create application"""
-    app = Flask("Alsvin-5GAPI")
-    app.config.from_object("Alsvin-5GAPI.config")
+    app = Flask("alsvin-5g-api")
+    app.config.from_object("alsvin-5g-api.config")
 
     if testing is True:
         app.config["TESTING"] = True
@@ -20,7 +20,6 @@ def create_app(testing=False):
     configure_cli(app)
     configure_apispec(app)
     register_blueprints(app)
-    init_celery(app)
 
     return app
 
@@ -60,18 +59,3 @@ def register_blueprints(app):
     """Register all blueprints for application"""
     app.register_blueprint(auth.views.blueprint)
     app.register_blueprint(api.views.blueprint)
-
-
-def init_celery(app=None):
-    app = app or create_app()
-    celery.conf.update(app.config.get("CELERY", {}))
-
-    class ContextTask(celery.Task):
-        """Make celery tasks work with Flask app context"""
-
-        def __call__(self, *args, **kwargs):
-            with app.app_context():
-                return self.run(*args, **kwargs)
-
-    celery.Task = ContextTask
-    return celery

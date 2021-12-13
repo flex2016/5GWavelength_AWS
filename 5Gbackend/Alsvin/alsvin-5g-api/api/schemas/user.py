@@ -1,5 +1,5 @@
-from Alsvin-5GAPI.models import User
-from Alsvin-5GAPI.extensions import ma, db
+from alsvin-5g-api.models import User
+from alsvin-5g-api.extensions import ma, db
 
 
 class UserSchema(ma.SQLAlchemyAutoSchema):

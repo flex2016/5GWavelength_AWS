@@ -1,10 +1,10 @@
 from flask import request
 from flask_restful import Resource
 from flask_jwt_extended import jwt_required
-from Alsvin-5GAPI.api.schemas import UserSchema
-from Alsvin-5GAPI.models import User
-from Alsvin-5GAPI.extensions import db
-from Alsvin-5GAPI.commons.pagination import paginate
+from alsvin-5g-api.api.schemas import UserSchema
+from alsvin-5g-api.models import User
+from alsvin-5g-api.extensions import db
+from alsvin-5g-api.commons.pagination import paginate
 
 
 class UserResource(Resource):

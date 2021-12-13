@@ -3,33 +3,15 @@ version: '3'
 
 services:
   web:
-    image: Alsvin-5GAPI
+    image: alsvin-5g-api
     build: .
-    command: gunicorn -b 0.0.0.0:5000 Alsvin-5GAPI.wsgi:app
+    command: gunicorn -b 0.0.0.0:5000 alsvin-5g-api.wsgi:app
     env_file:
       - ./.flaskenv
     environment:
-      - DATABASE_URI=sqlite:////db/Alsvin-5GAPI.db
-      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq
-      - CELERY_RESULT_BACKEND_URL=redis://redis
+      - DATABASE_URI=sqlite:////db/alsvin-5g-api.db
     volumes:
-      - ./Alsvin-5GAPI:/code/Alsvin-5GAPI
+      - ./alsvin-5g-api:/code/alsvin-5g-api
       - ./db/:/db/
     ports:
       - "5000:5000"
-  rabbitmq:
-    image: rabbitmq
-  redis:
-    image: redis
-  celery:
-    image: Alsvin-5GAPI
-    command: "celery worker -A Alsvin-5GAPI.celery_app:app"
-    env_file:
-      - ./.flaskenv
-    volumes:
-      - .:/code
-    depends_on:
-      - rabbitmq
-    environment:
-      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq
-      - CELERY_RESULT_BACKEND_URL=redis://redis

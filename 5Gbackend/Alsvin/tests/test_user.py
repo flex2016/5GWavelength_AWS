@@ -1,7 +1,7 @@
 from flask import url_for
 
-from Alsvin-5GAPI.extensions import pwd_context
-from Alsvin-5GAPI.models import User
+from alsvin-5g-api.extensions import pwd_context
+from alsvin-5g-api.models import User
 
 
 def test_get_user(client, db, user, admin_headers):

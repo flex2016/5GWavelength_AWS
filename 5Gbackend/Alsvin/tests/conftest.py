@@ -2,9 +2,9 @@ import json
 import pytest
 from dotenv import load_dotenv
 
-from Alsvin-5GAPI.models import User
-from Alsvin-5GAPI.app import create_app
-from Alsvin-5GAPI.extensions import db as _db
+from alsvin-5g-api.models import User
+from alsvin-5g-api.app import create_app
+from alsvin-5g-api.extensions import db as _db
 from pytest_factoryboy import register
 from tests.factories import UserFactory
 
