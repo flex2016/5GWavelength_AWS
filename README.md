@@ -26,9 +26,11 @@ This project heavily uses the 5G network and machine learning for detection of c
 
 
 ## Problem
-* Retailers are still far behind in digitizing their storefronts and taking advantage of the data within their storefronts. This transition is difficult due to a heavy reliance on expertise of technical solutions. Even managing a wifi system is difficult. Brick & Mortar Retailers are losing customers. 
+* Retailers are still far behind in digitizing their storefronts and taking advantage of the data within their storefronts. This transition is difficult due to a heavy reliance on expertise of technical solutions. Even managing a wifi system is difficult. Brick & Mortar retailers are losing customers due to being unable to understand all their customers. However this data is extremely valuable. 
 
 ## Solution
+* Addressing the issue of adding digitization - 5G for the most part is a plug it and forget it system. Endpoints like a 5G enabled camera (raspberry pi) can be easily setup in a location without reliance on a technical expert.
+
 * We created an end-to-end solution from Web UI (intially tested with an IoT camera - raspberry pi) to backend machine learning model - which examines consumer behavior - from fraud behavior to shopping behavior. This can also lead us to examine the movement of their stock. 
 
 Traditionally this is done through an ERP system or a manual paper tracking method. Using 5G and AI we can enable retailers to enable better experiences for consumers. Such as detecting consumer personas.
