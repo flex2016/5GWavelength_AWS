@@ -37,6 +37,8 @@ Traditionally this is done through an ERP system or a manual paper tracking meth
 
 ## Architecture 
 
+![image](https://drive.google.com/uc?export=view&id=1awkKFFUyO1iBQgLC5QoC9HF60N9cAnRl)
+
 
 ## References
 
