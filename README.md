@@ -43,6 +43,7 @@ Traditionally this is done through an ERP system or a manual paper tracking meth
 ## References
 
 * https://aws5gedge.devpost.com/ 
+* [Hackathon Pitch](https://devpost.com/software/ar-phone-app)
 * https://d1.awsstatic.com/Wavelength2020/Wavelength-Solution-Brief-FINAL-Aug2020.pdf 
 * https://copilot.github.com/ 
 * https://aws.amazon.com/fraud-detector/ 
